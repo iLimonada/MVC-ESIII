@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Top 10</title>
+</head>
+<body>
+<h1>Rank do Top 10</h1>
+<hr>
+
+<table>
+    <thead>
+    <tr>
+        <th> Titulo</th>
+        <th> Posicao no Rank </th>
+        <th> Nota por Design </th>
+        <th> Nota por Mobilidade </th>
+        <th> Nota de Construcao </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="top10:${top10}">
+        <td th:text="${top10.titulo}">Titulo</td>
+        <td th:text="${top10.posicaoRank}">Posicao no Rank</td>
+        <td th:text="${top10.nota1}">Nota por Design</td>
+        <td th:text="${top10.nota2}">Nota por Mobilidade</td>
+        <td th:text="${top10.nota3}">Nota de Construcao</td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
